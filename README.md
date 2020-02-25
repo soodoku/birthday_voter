@@ -4,7 +4,7 @@ We exploit data on millions of people multiple state voter registration files to
 
 ### Data
 
-We have posted all the state voter registration data we use to Harvard Dataverse. Catalist data is proprietary and we cannot post it.
+We have posted all the state voter registration data we use to Harvard Dataverse. Catalist data is proprietary, so we cannot post it online.
 
 * [D.C. Voter Registration Data (2014)](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/XMYGIE)
 * [Florida Voter Registration Data (20XX)](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/UBIG3F)
