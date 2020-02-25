@@ -4,14 +4,14 @@ We exploit data on millions of people multiple state voter registration files to
 
 ### Data
 
-We have posted the data we use all Harvard Dataverse
+We have posted all the state voter registration data we use to Harvard Dataverse. Catalist data is proprietary and we cannot post it.
 
-* [D.C. Voter Registration Data (YEAR)]()
-* [Florida Voter Registration Data (YEAR)]()
-* [Georgia Voter Registration Data (YEAR)]()
-* [North Carolina Voter Registration Data (YEAR)]()
-* [Ohio Voter Registration Data (YEAR)]()
-* [Catalist 1% National Voter File (YEAR)]()
+* [D.C. Voter Registration Data (2014)](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/XMYGIE)
+* [Florida Voter Registration Data (20XX)](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/UBIG3F)
+* [Georgia Voter Registration Data (2016)](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/XUV6G2)
+* [North Carolina Voter Registration Data (20XX)](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/NEFUBN)
+* [Ohio Voter Registration Data (20XX)](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/9KX752)
+* Catalist 1% National Voter File (20XX)
 
 ### Scripts
 
