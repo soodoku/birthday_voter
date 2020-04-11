@@ -110,7 +110,7 @@ We apply a set of filters to ensure that only persons at least 18 years old and 
 %\label{fig:birthday}
 %\end{figure}
 
-The dataset passed the validation checks. For the purposes of this analysis, we also limit the data to primary and general elections receiving at least 100 thousand votes. 
+The dataset passed the validation checks. For the purposes of this analysis, we also limit the data to primary and general elections receiving at least 100 thousand votes. This leaves us with XX number of observations spanning X mid-term, Y general, and K primary elections. 
 
 \section{Results}
 We get the cartesian product of the voter registration file and the voting history file, such that primary key of the dataset is $voter_id | election_type | election_date$. We then group by the number of days between the person's birthday and the election date, and calculate the mean change in voter turnout from the previous day. The analysis shows a substantial increase in turnout if election day falls on the voter’s birthday, as displayed in Figure ~\ref{fig:birthday}.
