@@ -85,26 +85,35 @@ The dataset was extracted as of February 2017 and includes 10 years of elections
 	\item \textbf{Unofficial voting history information} Data is extracted from independently submitted reports from the 67 county supervisors of elections capturing voting history at a fixed point in time. 
 \end{itemize}
 
+In all, there are X number of voters. 
+
 \subsection{Data Validation}
 
-We apply a set of filters to ensure that only persons at least 18 years old and registered to vote on election day are included in the analysis. We also perform a set of validation checks to confirm the soundness and accuracy of the dataset.
+We apply a set of filters to ensure that only persons at least 18 years old and registered to vote on election day are included in the analysis. We also perform a set of validation checks to confirm the soundness and accuracy of the dataset: 
 
 \begin{itemize}
 
-	\item \textbf{Fake Birthdays}: we search for potential fake birthdays by identifying a month and day of year with a high number of occurrences (e.g. if an unusually high number of voters brithdays fall on a specific day).
+	\item \textbf{Fake Birthdays}: we search for potential fake birthdays by checking if unusually large proportion of voters' birthdays fall on a specific day.
 
-	\item \textbf{Voter turnout grouped by age}: we expect to see turnout initially go down until mid 20s, then increase steadily until about 70-80 years before declining.
+	\item \textbf{Voter turnout grouped by age}: we expect to see turnout initially go down until people are in college, then increase steadily until about 70-80 years before declining. Figure 1 plots a loess.  
 
-	\item \textbf{Voter turnout during midterms vs. presidential elections}: we expect to see higher turnout for presidential elections than midterms.
+	\item \textbf{Voter turnout during midterms vs. presidential elections}: we expect higher turnout in presidential elections than midterms. We find that the average turnout during presidential elections as YY\% and during the midterms was XX\%. 
 
-	\item \textbf{Voter turnout during general vs. primary elections}: we expect to see higher turnout for general elections than primaries.
+	\item \textbf{Voter turnout during general vs. primary elections}: we expect to see higher turnout for general elections than primaries. We find that the average turnout during presidential elections as YY\% and during the primaries was XX\%. 
 
 \end{itemize}
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=.7]{../figs/fig_1_voting_percentage_by_age.png}
+%\caption{Birthday Voter}
+%\label{fig:birthday}
+%\end{figure}
 
 The dataset passed the validation checks. For the purposes of this analysis, we also limit the data to primary and general elections receiving at least 100 thousand votes. 
 
 \section{Results}
-We get the cartesian product of the voter registration file and the voting history file, such that primary key of the dataset is $voter_id | election_type | election_date$. We then group by the number of days between the person’s birthday and the election date, and calculate the mean change in voter turnout from the previous day. The analysis shows a substantial increase in turnout if election day falls on the voter’s birthday, as displayed in figure 1.
+We get the cartesian product of the voter registration file and the voting history file, such that primary key of the dataset is $voter_id | election_type | election_date$. We then group by the number of days between the person's birthday and the election date, and calculate the mean change in voter turnout from the previous day. The analysis shows a substantial increase in turnout if election day falls on the voter’s birthday, as displayed in Figure ~\ref{fig:birthday}.
 
 \begin{figure}[H]
 \centering
