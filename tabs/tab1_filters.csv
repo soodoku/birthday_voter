@@ -1,0 +1,6 @@
+Population,n_voters,pct_change
+Total_Voters,164524296,
+After Removing Null Birthdays,163849416,-0.41
+After Removing Non-Registered Voters,122259442,-25.38
+After Removing Voters <18 years,121535401,-0.59
+After Removing Voters >110 years,121533388,-0.0
