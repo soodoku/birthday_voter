@@ -1,0 +1,25 @@
+days_grouped_50,race,voted_abs,n_total,n_voters,n_nonvoters
++50,American Indian or Alaska Native,4.98,55879,20937,34942
++50,Asian or Pacific Islander,1.99,276512,87371,189141
++50,"Black, Not Hispanic",0.82,2417340,924966,1492374
++50,Hispanic,0.76,2529949,796775,1733174
++50,Multi-racial,4.53,71484,21296,50188
++50,Other,2.37,258306,87040,171266
++50,Unknown,2.13,287254,86779,200475
++50,"White, Not Hispanic",0.36,11319548,5045484,6274064
+-50,American Indian or Alaska Native,4.97,57263,21856,35407
+-50,Asian or Pacific Islander,2.04,275798,89744,186054
+-50,"Black, Not Hispanic",0.82,2407166,941075,1466091
+-50,Hispanic,0.71,2516234,827989,1688245
+-50,Multi-racial,4.32,75303,23227,52076
+-50,Other,2.14,257277,88073,169204
+-50,Unknown,2.22,292896,90442,202454
+-50,"White, Not Hispanic",0.37,11572439,5241401,6331038
+0,American Indian or Alaska Native,4.02,1155,436,719
+0,Asian or Pacific Islander,1.88,5285,1737,3548
+0,"Black, Not Hispanic",1.49,47915,18761,29154
+0,Hispanic,1.06,49647,16263,33384
+0,Multi-racial,4.95,1472,456,1016
+0,Other,1.85,5108,1723,3385
+0,Unknown,2.43,5618,1790,3828
+0,"White, Not Hispanic",0.63,227629,102374,125255
