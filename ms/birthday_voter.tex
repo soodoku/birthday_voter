@@ -103,12 +103,12 @@ We apply a set of filters to ensure that only persons at least 18 years old and 
 
 \end{itemize}
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=.7]{../figs/fig_1_voting_percentage_by_age.png}
-%\caption{Birthday Voter}
-%\label{fig:birthday}
-%\end{figure}
+\begin{figure}[H]
+\centering
+ \includegraphics[width=\textwidth]{../figs/fig2_bday_count_by_month_day.png}
+ \caption{Birthday Voter}
+ \label{fig:birthday}
+\end{figure}
 
 The dataset passed the validation checks. For the purposes of this analysis, we also limit the data to primary and general elections receiving at least 100 thousand votes. This leaves us with XX number of observations spanning X mid-term, Y general, and K primary elections. 
 
@@ -117,10 +117,11 @@ We get the cartesian product of the voter registration file and the voting histo
 
 \begin{figure}[H]
 \centering
- \includegraphics[scale=.7]{../figs/fig1.png}
+ \includegraphics[scale=.7]{../figs/fig1_turnout_chg_from_prev_day.png}
  \caption{Birthday Voter}
  \label{fig:birthday}
 \end{figure}
+
 
 Tables 1, 2 and 3 show the mean absolute change in turnout for when the election date falls $+/- 50 days,+/-  30 days, and +/- 7$ days from the voter's birthday compared to when the election falls on the voter's birthday. In all three cases, the change in turnout from the previous day is more than two times greater when election date falls on the voter’s birthday.
 
@@ -139,5 +140,13 @@ Further research may be warranted to determine the causal relationship between a
 \counterwithin{figure}{section}
 
 \section{Supporting Information}
+
+\subsection{Supplementary Results}
+\begin{figure}[H]
+\centering
+ \includegraphics[scale=.7]{../figs/fig3_prop_voted_by_age.png}
+ \caption{Birthday Voter}
+ \label{fig:birthday}
+\end{figure}
 
 \end{document}
