@@ -113,6 +113,9 @@ We apply a set of filters to ensure that only persons at least 18 years old and 
 The dataset passed the validation checks. For the purposes of this analysis, we also limit the data to primary and general elections receiving at least 100 thousand votes. This leaves us with XX number of observations spanning X mid-term, Y general, and K primary elections. 
 
 \input{../tabs/tab1_filters.tex}
+\input{../tabs/tab2_midterms_vs_pres.tex}
+\input{../tabs/tab3_pri_vs_gen.tex}
+\input{../tabs/tab4_summary_table.tex}
 
 \section{Results}
 We get the cartesian product of the voter registration file and the voting history file, such that the primary key of the dataset is $voter_id | election_type | election_date$. We then group by the number of days between the person's birthday and the election date, and calculate the mean change in voter turnout from the previous day. The analysis shows a substantial increase in turnout if election day falls on the voter's birthday (see Figure ~\ref{fig:birthday}).
@@ -124,7 +127,19 @@ We get the cartesian product of the voter registration file and the voting histo
  \label{fig:birthday}
 \end{figure}
 
+\input{../tabs/tab5_avg_abs_chg_from_prev_day_7d_window.tex}
+\input{../tabs/tab6_avg_abs_chg_from_prev_day_30d_window.tex}
+\input{../tabs/tab7_avg_abs_chg_from_prev_day_50d_window.tex}
+
 Tables 1, 2 and 3 show the mean absolute change in turnout for when the election date falls $+/- 50 days,+/-  30 days, and +/- 7$ days from the voter's birthday compared to when the election falls on the voter's birthday. In all three cases, the change in turnout from the previous day is more than two times greater when election date falls on the voter’s birthday.
+
+\input{../tabs/tab8_avg_abs_chg_from_prev_day_7d_window_groupby_race.tex}
+\input{../tabs/tab9_avg_abs_chg_from_prev_day_30d_window_groupby_race.tex}
+\input{../tabs/tab10_avg_abs_chg_from_prev_day_50d_window_groupby_race.tex}
+
+\input{../tabs/tab11_groupby_ballot_type_pct_chg_n_voters_from_prev_day_7d_window.tex}
+\input{../tabs/tab12_groupby_ballot_type_pct_chg_n_voters_from_prev_day_30d_window.tex}
+\input{../tabs/tab13_groupby_ballot_type_pct_chg_n_voters_from_prev_day_50d_window.tex}
 
 \section{Conclusion}
 Further research may be warranted to determine the causal relationship between a person's birthday and voting, which may be a result of a sense of duty, having more leisure time, or simply making it easier to remember. Whatever the case may be, our analysis shows that a person is in fact more likely to vote when election day falls on their birthday. 
