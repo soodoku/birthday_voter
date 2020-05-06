@@ -112,8 +112,10 @@ We apply a set of filters to ensure that only persons at least 18 years old and 
 
 The dataset passed the validation checks. For the purposes of this analysis, we also limit the data to primary and general elections receiving at least 100 thousand votes. This leaves us with XX number of observations spanning X mid-term, Y general, and K primary elections. 
 
+\input{../tabs/tab1_filters.tex}
+
 \section{Results}
-We get the cartesian product of the voter registration file and the voting history file, such that primary key of the dataset is $voter_id | election_type | election_date$. We then group by the number of days between the person's birthday and the election date, and calculate the mean change in voter turnout from the previous day. The analysis shows a substantial increase in turnout if election day falls on the voter’s birthday, as displayed in Figure ~\ref{fig:birthday}.
+We get the cartesian product of the voter registration file and the voting history file, such that the primary key of the dataset is $voter_id | election_type | election_date$. We then group by the number of days between the person's birthday and the election date, and calculate the mean change in voter turnout from the previous day. The analysis shows a substantial increase in turnout if election day falls on the voter's birthday (see Figure ~\ref{fig:birthday}).
 
 \begin{figure}[H]
 \centering
@@ -121,7 +123,6 @@ We get the cartesian product of the voter registration file and the voting histo
  \caption{Birthday Voter}
  \label{fig:birthday}
 \end{figure}
-
 
 Tables 1, 2 and 3 show the mean absolute change in turnout for when the election date falls $+/- 50 days,+/-  30 days, and +/- 7$ days from the voter's birthday compared to when the election falls on the voter's birthday. In all three cases, the change in turnout from the previous day is more than two times greater when election date falls on the voter’s birthday.
 
