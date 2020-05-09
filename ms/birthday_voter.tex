@@ -81,19 +81,16 @@ In this paper, we contribute to the large literature on reasons why people vote.
 Across elections, we find that the average effect of being born on the election day is XX\%. But when we subset on midterm elections, we see an average effect of Y\%. Most of the effect is concentrated in in-person voting, suggesting that memory is less of a factor.
 
 \section{Data and Research Design}
-The dataset was extracted as of February 2017 and includes 10 years of elections from 2006 through 2016. There are two files.
+We exploit the February 2017 Florida Voter Registration extract. The extract contains 10 years of election data, from 2006 through 2016. The data contains voters were officially registered or pre-registered as of end of January, 2017. All information is included except limited in those cases in which a voter requested exemption from public disclosure per Section 119.071, Fla. Stat.  (Section 98.0981(1)(b), Fla. Stat.). The voting history information comes from independently submitted reports from the 67 county supervisors of elections capturing voting history at a fixed point in time. In all, we have data on X number of voters. We limit our data to people at least 18 years old and registered to vote on election day. For the purposes of this analysis, we also limit the data to primary and general elections receiving at least 100 thousand votes. This leaves us with XX number of observations spanning X mid-term, Y general, and K primary elections. 
 
-\begin{itemize}
-	\item \textbf{Official voter registration information}: Data is extracted from the Florida Voter Registration System and includes information on voters who are officially registered or pre-registered as of the end of the prior month. All information is included except limited in those cases in which a voter requested exemption from public disclosure per Section 119.071, Fla. Stat.  (Section 98.0981(1)(b), Fla. Stat.).
+\input{../tabs/tab1_filters.tex}
+\input{../tabs/tab2_midterms_vs_pres.tex}
+\input{../tabs/tab3_pri_vs_gen.tex}
+\input{../tabs/tab4_summary_table.tex}
 
-	\item \textbf{Unofficial voting history information} Data is extracted from independently submitted reports from the 67 county supervisors of elections capturing voting history at a fixed point in time. 
-\end{itemize}
+We get the cartesian product of the voter registration file and the voting history file, such that the primary key of the dataset is $voter_id | election_type | election_date$. 
 
-In all, there are X number of voters. 
-
-\subsection{Data Validation}
-
-We apply a set of filters to ensure that only persons at least 18 years old and registered to vote on election day are included in the analysis. We also perform a set of validation checks to confirm the soundness and accuracy of the dataset: 
+We subject the data to a variety of data quality checks to make sure that confirm the soundness and accuracy of the dataset: 
 
 \begin{itemize}
 
@@ -107,6 +104,7 @@ We apply a set of filters to ensure that only persons at least 18 years old and 
 
 \end{itemize}
 
+
 \begin{figure}[H]
 \centering
  \includegraphics[width=\textwidth]{../figs/fig2_bday_count_by_month_day.png}
@@ -114,16 +112,7 @@ We apply a set of filters to ensure that only persons at least 18 years old and 
  \label{fig:birthday}
 \end{figure}
 
-The dataset passed the validation checks. For the purposes of this analysis, we also limit the data to primary and general elections receiving at least 100 thousand votes. This leaves us with XX number of observations spanning X mid-term, Y general, and K primary elections. 
-
-\input{../tabs/tab1_filters.tex}
-\input{../tabs/tab2_midterms_vs_pres.tex}
-\input{../tabs/tab3_pri_vs_gen.tex}
-\input{../tabs/tab4_summary_table.tex}
-
-We get the cartesian product of the voter registration file and the voting history file, such that the primary key of the dataset is $voter_id | election_type | election_date$. We then group by the number of days between the person's birthday and the election date, and calculate the mean voter turnout. We use different windows---30 days, 7 days, 1 days---to estimate the mean difference.
-
-We also compare how the estimate varies by general election, midterms, and primaries, how the effect varies by race. And we explore whether the effect is concentrated among in-person voting than absentee or mail-in ballots.
+We group by the number of days between the person's birthday and the election date, and calculate the mean voter turnout. We use different windows---30 days, 7 days, 1 days---to estimate the mean difference. We also compare how the estimate varies by general election, midterms, and primaries, how the effect varies by race. And we explore whether the effect is concentrated among in-person voting than absentee or mail-in ballots.
 
 \section{Results}
 The analysis shows a substantial increase in turnout if election day falls on the voter's birthday (see Figure ~\ref{fig:birthday}).
