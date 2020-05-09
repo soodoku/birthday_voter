@@ -51,7 +51,7 @@
 \usepackage{libertine}
 \usepackage{inconsolata}
 %\usepackage{babel}
-\title{\Large{Birthday Voter: Effect of Birthday Falling on Voting Day on Voting}\footnote{Scripts behind the analysis can be downloaded at: \url{https://github.com/soodoku/birthday_voter}.}}
+\title{\Large{Birthday Voter: Effect of Being Born on Election Day}\footnote{Scripts behind the analysis can be downloaded at: \url{https://github.com/soodoku/birthday_voter}.}}
 \author{Jake Leland\thanks{Jake can be reached at \href{mailto:jake.leland@utexas.edu}{\footnotesize{\texttt{jakebleland@gmail.com}}}}
 \and Gaurav Sood\thanks{Gaurav can be reached at \href{mailto:gsood07@gmail.com}{\footnotesize{\texttt{gsood07@gmail.com}}}}}
 
@@ -74,7 +74,11 @@ setwd(basedir)
 
 \clearpage
 \doublespacing
-We leverage data on the voting behavior of millions of people to estimate whether people turn out more often if their birthday falls on the voting day. We expect people vote more often when their birthday falls on the voting day because of three reasons. First, we posit that people see voting as a duty and like doing dutiful things on their birthdays. Second, people may take the day off on their birthdays and use the time to vote. Third, people may be likelier to remember the election day if it falls on their birthday. We expect any differences to be concentrated among the midterm and primary elections when the propensity to turn out is low. When we pool across elections, data show that it doesn't matter whether or not the birthday falls on election day. But when we subset on midterm elections, we see an average effect of Y\%. Most of the effect is concentrated in in-person voting, suggesting that memory is less of a factor.
+Given the chance of being the pivotal voter is vanishingly small, the cost of voting looms large. Thus, if the aim is to sway policy, it is irrational to turnout \citep{mclean1994condorcet, downs1957economic} (though see \citep{edlin2007voting}). If not to sway policy, why do people vote? \cite{riker1968theory} suggest that people derive some expressive benefits from voting, for instance, utility from fulfilling their duty (see also  \cite{fiorina1976voting}).  And indeed, some data suggests that people vote more because of expressive reasons than instrumental  \citep{kan2001expressive}. In a similar vein, \citep{verba1993citizen} find that income and time do not explain much variation in why people vote.
+
+In this paper, we contribute to the large literature on reasons why people vote. We leverage data on the voting behavior of millions of people to estimate whether people turn out more often if their birthday falls on the voting day. We expect people to vote more often when their birthday falls on the voting day because of three reasons. First, we posit that people see voting as a duty and like doing dutiful things on their birthdays. Second, people may take the day off on their birthdays and use the time to vote. Third, people may be likelier to remember the election day if it falls on their birthday. Given benefit for time should be the same across midterm and presidential election cycles, if time were the key factor, we expect the effect to be: a. similar across midterm and presidential elections (and primary and general elections), b. concentrated among people who vote in-person than mail.
+ 
+Across elections, we find that the average effect of being born on the election day is XX\%. But when we subset on midterm elections, we see an average effect of Y\%. Most of the effect is concentrated in in-person voting, suggesting that memory is less of a factor.
 
 \section{Data and Research Design}
 The dataset was extracted as of February 2017 and includes 10 years of elections from 2006 through 2016. There are two files.
@@ -117,7 +121,7 @@ The dataset passed the validation checks. For the purposes of this analysis, we 
 \input{../tabs/tab3_pri_vs_gen.tex}
 \input{../tabs/tab4_summary_table.tex}
 
-We get the cartesian product of the voter registration file and the voting history file, such that the primary key of the dataset is $voter_id | election_type | election_date$. We then group by the number of days between the person's birthday and the election date, and calculate the mean voter turnout. We use different windows---30 days, 7 days, 2 days---to estimate the mean difference.
+We get the cartesian product of the voter registration file and the voting history file, such that the primary key of the dataset is $voter_id | election_type | election_date$. We then group by the number of days between the person's birthday and the election date, and calculate the mean voter turnout. We use different windows---30 days, 7 days, 1 days---to estimate the mean difference.
 
 We also compare how the estimate varies by general election, midterms, and primaries, how the effect varies by race. And we explore whether the effect is concentrated among in-person voting than absentee or mail-in ballots.
 
