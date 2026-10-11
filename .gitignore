@@ -1,15 +1,20 @@
-.*
-!.gitignore
-!.gitattributes
-!.travis.yml
-!.pep8speaks.yml
-*.pyc
-*.log
-venv
-venv3
-docs/build
-dist
-*.egg-info
-build
-dev/
-lit/
+.Rhistory
+.RData
+.Rproj.user/
+.DS_Store
+renv/library/
+renv/staging/
+ms/*.aux
+ms/*.bbl
+ms/*.blg
+ms/*.fdb_latexmk
+ms/*.fls
+ms/*.log
+ms/*.out
+ms/*.xdv
+# Voter files are restricted on Dataverse and identify individuals.
+data/raw/
+data/work/
+
+# Claude Code worktrees and local settings.
+.claude/
