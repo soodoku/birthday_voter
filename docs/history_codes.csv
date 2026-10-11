@@ -1,0 +1,7 @@
+state,code,description,mode,ballot_cast,ballot_counted,source
+FL,Y,Voted at polls,election_day,TRUE,TRUE,FL Division of Elections Voter Extract Disk File Layout (02-2017 and 05-2022)
+FL,E,Voted early,early,TRUE,TRUE,FL Division of Elections Voter Extract Disk File Layout (02-2017 and 05-2022)
+FL,A,Voted absentee / by mail,mail,TRUE,TRUE,FL Division of Elections Voter Extract Disk File Layout (02-2017 and 05-2022)
+FL,B,Absentee / vote-by-mail ballot not counted,mail,TRUE,FALSE,FL Division of Elections Voter Extract Disk File Layout (02-2017 and 05-2022)
+FL,P,Provisional ballot not counted,election_day,TRUE,FALSE,FL Division of Elections Voter Extract Disk File Layout (02-2017 and 05-2022)
+FL,N,Did not vote (not reported by all counties),none,FALSE,FALSE,FL Division of Elections Voter Extract Disk File Layout (02-2017 and 05-2022)
