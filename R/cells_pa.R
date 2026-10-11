@@ -69,6 +69,8 @@ pa_county_cells <- function(file, con) {
     paste0(vapply(slot_fields, unquote, ""), " AS c", slot_fields, collapse = ", "),
     DBI::dbQuoteString(con, file), columns
   ))
+  # About 2 of 8.8 million registrants match no county election map and drop out of every election
+  # (8,823,808 per election against 8,823,810 with a date of birth and registration date).
   # REGISTRATION_DATE may be a re-registration; as in Ohio, someone counts as
   # registered if the date clears the deadline or they had voted before.
   DBI::dbExecute(con, sprintf(

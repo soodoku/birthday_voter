@@ -44,7 +44,7 @@ test_that("the manuscript takes its numbers from macros", {
   body <- gsub("\\\\cite[a-z]*\\{[^}]*\\}|\\\\ref\\{[^}]*\\}|\\\\label\\{[^}]*\\}|\\{[a-z]+\\.pdf\\}", "", body)
   # Calendar facts, legal deadlines, file coverage, and design constants; every estimate is a macro.
   allowed <- c(
-    "2000", "2006", "2009", "2016", "2017", "2018", "2020", "2022", "2024",
+    "2000", "2006", "2009", "2014", "2016", "2017", "2018", "2020", "2022", "2024",
     "0", "1", "2", "4", "8", "23", "18", "30", "40", "60", "95", "100", "365", "366"
   )
   numbers <- unlist(regmatches(body, gregexpr("[0-9][0-9,.]*", body)))
