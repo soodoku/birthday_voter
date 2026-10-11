@@ -61,6 +61,7 @@ checks <- list(
   cluster_twoway = list(\(d) d, ~ birth_md + election),
   discovery = list(\(d) dplyr::filter(d, cell_file == discovery_cells), ~birth_md),
   replication = list(\(d) dplyr::filter(d, cell_file != discovery_cells), ~birth_md),
+  florida_late = list(\(d) dplyr::filter(d, cell_file == "fl_2022"), ~birth_md),
   general = list(\(d) dplyr::filter(d, election_type == "GEN"), ~birth_md),
   primary = list(\(d) dplyr::filter(d, election_type != "GEN"), ~birth_md),
   oh_pa_all = list(\(d) dplyr::filter(d, !is.na(settled)), ~birth_md),

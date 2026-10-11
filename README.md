@@ -29,8 +29,9 @@ people who would have voted at the polls vote early or by mail instead. The patt
 
 ![Turnout by days between birthday and Election Day](figs/turnout.png)
 
-Each point compares people whose birthday fell that many days from Election Day with people born on the same date
-in years when it fell more than 30 days away; bars are 95% confidence intervals.
+Each point is the difference in turnout between a birthday that many days from Election Day and a birthday more
+than 30 days away, among people born on the same date in the same state and type of election; bars are 95%
+confidence intervals.
 
 ## Reproduce
 

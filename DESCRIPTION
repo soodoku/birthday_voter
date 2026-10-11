@@ -7,8 +7,8 @@ Authors@R: c(
     person("Gaurav", "Sood", role = c("aut", "cre"), email = "gsood07@gmail.com"))
 Description: Data, analyses, and manuscript for a paper estimating whether
     registered voters are more likely to vote when Election Day falls on
-    their birthday, using state voter files from Florida, Ohio,
-    Pennsylvania, and Washington.
+    their birthday, using state voter files from Florida, Ohio, and
+    Pennsylvania.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Imports:

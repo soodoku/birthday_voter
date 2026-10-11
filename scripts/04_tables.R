@@ -53,6 +53,7 @@ check_labels <- c(
   main = "Main specification", cluster_md_state = "Clustered by birth date within state",
   cluster_twoway = "Clustered by birth date and by election$^a$",
   discovery = "Florida 2006--2016 only", replication = "All other elections",
+  florida_late = "\\quad Florida 2018--2020 only",
   general = "General elections only", primary = "Primaries only",
   oh_pa_all = "Ohio and Pennsylvania", oh_pa_settled = "\\quad registered a year or more before"
 )
@@ -120,6 +121,8 @@ values <- c(
   replicationDay = pts(-rob("replication", "day_before")$estimate),
   replicationDaySe = pts(rob("replication", "day_before")$std_error),
   discoveryDay = pts(-rob("discovery", "day_before")$estimate),
+  lateFlDay = pts(-rob("florida_late", "day_before")$estimate),
+  lateFlDaySe = pts(rob("florida_late", "day_before")$std_error),
   settledDay = pts(-rob("oh_pa_settled", "day_before")$estimate),
   allDay = pts(-rob("oh_pa_all", "day_before")$estimate),
   twowaySe = pts(rob("cluster_twoway", "day_before")$std_error),
