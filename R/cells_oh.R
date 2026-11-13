@@ -49,7 +49,7 @@ build_oh_cells <- function(extract, deadline_days, con) {
   # date clears the deadline or they had voted in an earlier election; the
   # vote in the election itself never decides who is counted. `settled`
   # marks people whose latest registration was at least a year before the
-  # election, so no registration change (often made when a driver's licence
+  # election, so no registration change (often made when a driver's license
   # is renewed, on the birthday) fell in the run-up to it.
   cells <- DBI::dbGetQuery(con, sprintf(
     "WITH long AS (UNPIVOT (SELECT voter_id, dob, reg_date, %s FROM voters) ON %s INTO NAME source_column VALUE ballot),

@@ -51,7 +51,7 @@ measured <- function(cells, outcome) {
 # All days within `window` of the election enter one regression, against
 # birthdays further away. Estimating each day in its own regression instead
 # lets an effect on one day leak, with the opposite sign, into the estimates
-# for its neighbours, because a birth date's other years serve as its
+# for its neighbors, because a birth date's other years serve as its
 # comparison.
 fit_event <- function(cells, outcome = "voted", window = 30L, cluster = ~birth_md) {
   cells$day <- ifelse(abs(cells$days) <= window, cells$days, 999L)
